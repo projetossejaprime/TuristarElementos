@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turistar</title>
+    <link rel="stylesheet" href="assets/css/style2.css">
+    <link rel="stylesheet" href="assets/css/materialdesignicons.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="__side-cart" id="reserveBar">
+        <div class="__cart-button" onclick="hideBar()">
+            <div class="__cart-button-tag">
+                <span class="__tag-number">13</span>
+            </div>
+            <span class="mdi mdi-cart"></span>
+        </div>
+        <div class="__cart-info">
+            <div class="__cart-title">
+                <h3>Seu carrinho:</h3>
+            </div>
+            <div class="__info-box">
+                <div class="__info-row">
+                    <h4>Quantidade:</h4>
+                    <span>13 itens</span>
+                </div>
+                <div class="__info-row">
+                    <h4>Total:</h4>
+                    <span>R$230,90</span>
+                </div>
+            </div>
+        </div>
+        <div class="__cart-buttons">
+            <a class="__cart-finish-button" href="#">Finalizar</a>
+            <a class="__cart-continue-button" href="#" onclick="hideBar()">Continuar comprando</a>
+        </div>
+    </div>
+
+    <section class="screensize">
+        <h1>Teste de botões</h1>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+    <script>
+        var bar = $('#reserveBar');
+        var isHidden = false;
+
+        function hideBar() {
+            if (isHidden == false) {
+                $(bar).removeClass('__left-animate-show');
+                $(bar).addClass('__left-hide');
+                $(bar).addClass('__left-animate-hide');
+                isHidden = true;
+            } else {
+                $(bar).removeClass('__left-animate-hide');
+                $(bar).removeClass('__left-hide');
+                $(bar).addClass('__left-animate-show');
+                isHidden = false;
+            }
+        }
+    </script>
+</body>
+
+</html>
